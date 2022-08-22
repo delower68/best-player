@@ -39,3 +39,7 @@ function addToSelection(element){
     displayName();
 }
 
+
+// player name shows done 
+
+

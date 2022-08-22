@@ -128,13 +128,13 @@
             <div class="inline w-32">
                  <!-- seleted palyer  -->
               <div class="w-80 text-pink-100 bg-black shadow-xl  mt-16 h-96">
-                <h1 class="text-xl text-center " id="totalPlayerName" ></h1>
+                <h1 class="text-xl text-center " id="totalPlayerName" >Best Player List </h1>
                 <div class="overflow-x-auto">
                   <table class="table w-full mt-3  ">
                     <!-- head -->
                     <thead>
                       <tr >
-                        <th>Player Name List </th>
+                        <th>Player Name  </th>
                       </tr>
                     </thead>
                     <tbody id="eachPlayerName">
@@ -149,10 +149,10 @@
             <div class="w-80 text-pink-100 bg-black shadow-xl  mt-16 h-100">
                 <h1 class="text-4xl mb-5 text-center pt-12 px-5 ">Budget</h1>
                 <label class="ml-3 " for="text">Per Player: 
-                  <input type="text" class="px-2 text-black" placeholder="Per Player cost">
+                  <input id="perPlayerInputField" type="text" class="px-2 text-black" placeholder="Per Player cost">
                 </label>
-                <button class="btn bg-green-400 px-8 py-3 w-72 text-center ml-4 mt-10 mb-5 ">Calculate</button>
-                <p class="pt-5 text-center text-xl pb-5" > Player Expenses: $<span>00</span> </p>
+                <button class="btn bg-green-400 px-8 py-3 w-72 text-center ml-4 mt-10 mb-5 " id="totalPlayerCost">Calculate</button>
+                <p class="pt-5 text-center text-xl pb-5" > Player Expenses: $<span id="totalPlayervalue"></span> </p>
                     <div class="pb-4">
                       <h1 class="ml-3  inline">Manager </h1>
                     <input type="text" class="px-2 text-black" placeholder="manager fee">
@@ -175,6 +175,6 @@
     </footer>
     <!-- JS FILE LINK  -->
     <script src="js/selection.js"></script>
-
+    <script src="js/budget.js"></script>
 </body>
 </html>
