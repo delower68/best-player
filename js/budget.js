@@ -14,11 +14,11 @@ document.getElementById('totalPlayerCost').addEventListener('click', function(){
     perPlayerCost.value = '' ;
 
     const myTotalPlayerCost = totalPlayerNumber * totalperPlayerInputField ;
-    console.log(myTotalPlayerCost);
+    // console.log(myTotalPlayerCost);
 
     const myTotalPlayervalues = document.getElementById('totalPlayervalue');
     const myTotalPlayervaluesString = myTotalPlayervalues.innerText ;
     const myTotalPlayervalue = parseFloat(myTotalPlayervaluesString);
     
-    myTotalPlayervalue.innerText = myTotalPlayerCost ;
+    myTotalPlayervalues.innerText = myTotalPlayerCost ;
 })
