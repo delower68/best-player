@@ -1,3 +1,4 @@
+// here is coomon function 
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId)
     const inputFieldValueStr = inputField.value
@@ -13,12 +14,12 @@ function getTextElementValueById(elementId) {
 }
 document.getElementById('totalPlayerCost').addEventListener('click', function(){
     const totalperPlayerInputField = getInputFieldValueById('perPlayerInputField');
+
     // get selected player number 
 
     let totalPlayerNumber = getTextElementValueById('totalPlayerName')
     
-    
-    
+
     // get the value of total player cost calculate 
     const myTotalPlayerCost = totalPlayerNumber * totalperPlayerInputField ;
 

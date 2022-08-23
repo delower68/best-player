@@ -39,7 +39,7 @@ function displayName(){
     
 }
 function addToSelection(element){
-    const selectedBtn = element.setAttribute('disabled' , '' )
+    const selectedBtn = element.setAttribute( 'disabled' , '' )
     // console.log(selectedBtn);
     const playerName = element.parentNode.parentNode.children[0].innerText ;
     const PlayerNameObj = {
