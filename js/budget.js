@@ -1,4 +1,4 @@
-// here is coomon function 
+// here is common function 
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId)
     const inputFieldValueStr = inputField.value
@@ -12,6 +12,10 @@ function getTextElementValueById(elementId) {
     const textElementValue = textElement.innerText
     return textElementValue
 }
+
+// common function end 
+
+
 document.getElementById('totalPlayerCost').addEventListener('click', function(){
     const totalperPlayerInputField = getInputFieldValueById('perPlayerInputField');
 
@@ -32,75 +36,40 @@ document.getElementById('totalPlayerCost').addEventListener('click', function(){
 
 })
 
+
+
     // get the total cost of all players 
 document.getElementById('totalCostCalculate').addEventListener('click', function()
 {
-    // get the mamager field value 
-    const managerInputs = document.getElementById('managerInput');
-    const managerInputFieldString = managerInputs.value ;
-    const managerInputField = parseFloat(managerInputFieldString);
-    managerInputs.value = '' ;
-    // console.log(managerInputField);
+    // get the all cost of players 
+
+
+    // get the manager field value 
+    const mamagerInputField = getInputFieldValueById('managerInput');
+
 
     // get the coach field value 
+    const coachInputField = getInputFieldValueById('coachInput');
 
-    const coachInputs = document.getElementById('coachInput');
-    const coachInputString = coachInputs.value ;
-    const coachInput = parseFloat(coachInputString);
-    coachInputs.value = '' ;
-    // console.log(coachInput);
+    // manager & coach total cost 
+    const mamagerCoachTotalFee = mamagerInputField + coachInputField  ;
 
-    // get the all cost of players
 
-    const myAllCostPlayers = managerInputField + coachInput ;
-    console.log(myAllCostPlayers);
+    const myTotalPlayervalues = document.getElementById('totalPlayervalue');
+    const myTotalPlayervaluesString = myTotalPlayervalues.innerText ;
+    const myTotalPlayervalue = parseFloat(myTotalPlayervaluesString);
+    myTotalPlayervalue.innerText = mamagerCoachTotalFee ;
+
+    // get the all cost of match 
+    const totalCalculate = mamagerCoachTotalFee + myTotalPlayervalue;
+
+    // before  total calculate value add  
+    const calculateInitialValue = document.getElementById('totalValue');
+    const calculateInitialValueString = calculateInitialValue.innerText ;
+    const calculateTotalInitial = parseFloat(calculateInitialValueString);
+    
+    // main value set here 
+    calculateInitialValue.innerText = totalCalculate ;
+    
+
 })
-
-// document.getElementById('totalPlayerCost').addEventListener('click', function(){
-//     const perPlayerCost = document.getElementById('perPlayerInputField');
-//     const totalperPlayerInputFieldString = perPlayerCost.value ;
-//     const  totalperPlayerInputField = parseFloat(totalperPlayerInputFieldString);
-
-//     // get selected player number 
-
-//     const playerNumber = document.getElementById('totalPlayerName');
-//     const playerNumberString = playerNumber.innerText ;
-//     const totalPlayerNumber = parseFloat(playerNumberString); 
-//     totalPlayerNumber.innerText = totalperPlayerInputField
-//     perPlayerCost.value = '' ;
-    
-//     // get the value of total player cost calculate 
-//     const myTotalPlayerCost = totalPlayerNumber * totalperPlayerInputField ;
-
-//     const myTotalPlayervalues = document.getElementById('totalPlayervalue');
-//     const myTotalPlayervaluesString = myTotalPlayervalues.innerText ;
-//     const myTotalPlayervalue = parseFloat(myTotalPlayervaluesString);
-    
-//     myTotalPlayervalues.innerText = myTotalPlayerCost ;
-
-
-// })
-
-//     // get the total cost of all players 
-// document.getElementById('totalCostCalculate').addEventListener('click', function()
-// {
-//     // get the mamager field value 
-//     const managerInputs = document.getElementById('managerInput');
-//     const managerInputFieldString = managerInputs.value ;
-//     const managerInputField = parseFloat(managerInputFieldString);
-//     managerInputs.value = '' ;
-//     // console.log(managerInputField);
-
-//     // get the coach field value 
-
-//     const coachInputs = document.getElementById('coachInput');
-//     const coachInputString = coachInputs.value ;
-//     const coachInput = parseFloat(coachInputString);
-//     coachInputs.value = '' ;
-//     // console.log(coachInput);
-
-//     // get the all cost of players
-
-//     const myAllCostPlayers = managerInputField + coachInput ;
-//     console.log(myAllCostPlayers);
-// })
